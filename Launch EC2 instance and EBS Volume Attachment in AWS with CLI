@@ -1,0 +1,15 @@
+#Launching EC2 instance
+
+aws ec2 run-instances --image-id ami-0c94855ba95c71c99 --instance-type t2.micro --region us-east-1
+
+
+#Creating EBS Volume
+
+aws ec2 create-volume --size 10 --availability-zone us-east-1a --region us-east-1
+
+
+#Attaching EBS Volume to EC2 instace
+
+aws ec2 attach-volume --volume-id vol-1234567890abcdef0 --instance-id i-0123456789abcdef0 --device /dev/xvdf --region us-east-1
+
+
