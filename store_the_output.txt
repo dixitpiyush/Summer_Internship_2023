@@ -1,0 +1,15 @@
+import subprocess
+import os
+
+# Execute the command and capture the output
+output = subprocess.check_output("date", shell=True, universal_newlines=True)
+
+# Print the output
+print(output)
+
+# Execute the command and capture the output
+command = "your_command_here"
+output = os.popen(command).read()
+
+# Print the output
+print(output)
